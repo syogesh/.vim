@@ -1,20 +1,21 @@
 " Vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'tacahiroy/ctrlp-funky'
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tacahiroy/ctrlp-funky'
 
+call vundle#end()
 filetype on
 
 set ls=2            " allways show status line
@@ -33,6 +34,7 @@ set relativenumber  " set absolute line numbers
 set number          " show line numbers
 set numberwidth=4   " line numbering takes up 5 spaces
 set ignorecase      " ignore case when searching
+set scs
 set nowrap            " stop lines from wrapping
 set noignorecase    " don't ignore case
 set notitle         " don't show "Thanks for flying vim"
@@ -142,7 +144,7 @@ map <F2> :next<CR>      " map F2 to open next buffer
 map ,n :NERDTree<CR>
 map <F7> :TlistToggle<CR> " map F7 to toggle the Tag Listing
 map <silent> <C-N> :silent noh<CR> " turn off highlighted search
-map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
+map ,v :vsplit ~/.vimrc<cr> " edit my .vimrc file in a split
 map ,u :source ~/.vimrc<cr> " update the system settings from my vimrc file
 map ,p :Lodgeit<CR>         " pastes selection / file to paste.pocoo.org
 map ,ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
