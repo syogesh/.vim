@@ -4,15 +4,13 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tacahiroy/ctrlp-funky'
 
 call vundle#end()
@@ -95,9 +93,9 @@ if has("gui_running")
     set background=dark   " adapt colors for background
     set guioptions-=T
     set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
-    colorscheme Tomorrow-Night
+    colorscheme gruvbox
 else
-    colorscheme Tomorrow-Night   " use this color scheme
+    colorscheme gruvbox
     set background=dark  " adapt colors for background
 endif
 
@@ -204,12 +202,6 @@ filetype plugin on
 
 " Highlight current line
 set cursorline 
-
-" Vim Indent Guides
-autocmd VimEnter * IndentGuidesEnable
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 1
 
 " Navigate split windows with Control tab 
 " nnoremap <C-tab> <C-w><C-w>
